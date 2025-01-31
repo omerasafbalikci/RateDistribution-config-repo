@@ -1,6 +1,6 @@
 spring:
   application:
-    name: rest-data-provider-service
+    name: rest-data-provider
   data:
     cache:
       type: redis
@@ -27,30 +27,30 @@ simulator:
   rates:
     - rateName: "EURUSD"
       initialPrice: 1.05
-      drift: 0.0
-      baseSpread: 0.001
+      drift: 0.00001
+      baseSpread: 0.0002
       garchParams:
-        omega: 0.000001
-        alpha: 0.10
-        beta: 0.85
-      jumpIntensity: 0.0005   # lambda
+        omega:  0.0000001
+        alpha: 0.05
+        beta: 0.90
+      jumpIntensity: 0.0001   # lambda
       jumpMean: 0.0
-      jumpVol:  0.02
-      useMeanReversion: false
-      kappa: 0.0
+      jumpVol:  0.005
+      useMeanReversion: true
+      kappa: 0.05
       theta: 1.10
 
     - rateName: "USDTRY"
       initialPrice: 18.0
-      drift: 0.0002
-      baseSpread: 0.05
+      drift: 0.0005
+      baseSpread: 0.02
       garchParams:
-        omega: 0.00001
-        alpha: 0.12
-        beta: 0.80
-      jumpIntensity: 0.0008
-      jumpMean: 0.0
-      jumpVol: 0.05
-      useMeanReversion: false
-      kappa: 0.0
+        omega:  0.000001
+        alpha: 0.10
+        beta: 0.85
+      jumpIntensity: 0.0003
+      jumpMean: 0.001
+      jumpVol: 0.02
+      useMeanReversion: true
+      kappa: 0.05
       theta: 18.5
