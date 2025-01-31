@@ -30,15 +30,15 @@ simulator:
       drift: 0.0
       baseSpread: 0.0002
       garchParams:
-        omega:  0.00000005
-        alpha: 0.05
-        beta: 0.90
-      jumpIntensity: 0.0005   # lambda
+        omega:  0.00000002
+        alpha: 0.02
+        beta: 0.95
+      jumpIntensity: 0.0002   # lambda
       jumpMean: 0.0
-      jumpVol:  0.003
+      jumpVol:  0.001
       useMeanReversion: true
-      kappa: 0.01
-      theta: 1.037
+      kappa: 0.1
+      theta: 1.038
 
     - rateName: "USDTRY"
       initialPrice: 18.0
