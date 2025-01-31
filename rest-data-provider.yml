@@ -26,18 +26,18 @@ simulator:
 
   rates:
     - rateName: "EURUSD"
-      initialPrice: 1.037
-      drift: 0.0
+      initialPrice: 1.038
+      drift: -0.0002
       baseSpread: 0.0002
       garchParams:
         omega:  0.00000002
         alpha: 0.02
         beta: 0.95
-      jumpIntensity: 0.0002   # lambda
+      jumpIntensity: 0.0001   # lambda
       jumpMean: 0.0
-      jumpVol:  0.001
+      jumpVol:  0.0005
       useMeanReversion: true
-      kappa: 0.1
+      kappa: 1.0
       theta: 1.038
 
     - rateName: "USDTRY"
