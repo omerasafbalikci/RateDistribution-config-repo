@@ -19,7 +19,6 @@ eureka:
 simulator:
   update-interval-millis: 1000
   max-updates: 0  # 0 => sınırsız
-  # 2 parite örneği için 2x2 korelasyon matrisi
   correlationMatrix:
     - [1.0, 0.35]
     - [0.35, 1.0]
@@ -33,7 +32,7 @@ simulator:
         omega:  0.00000002
         alpha: 0.02
         beta: 0.95
-      jumpIntensity: 0.0001   # lambda
+      jumpIntensity: 0.0001
       jumpMean: 0.0
       jumpVol:  0.0005
       useMeanReversion: true
