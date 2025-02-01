@@ -17,37 +17,37 @@ eureka:
       defaultZone: http://localhost:8761/eureka
 
 simulator:
-  update-interval-millis: 1000
+  update-interval-millis: 5000
   max-updates: 0  # 0 => sınırsız
   correlationMatrix:
-    - [1.0, 0.35]
-    - [0.35, 1.0]
+    - [1.0, 0.25]
+    - [0.25, 1.0]
 
   rates:
     - rateName: "EURUSD"
-      initialPrice: 1.038
-      drift: -0.0002
+      initialPrice: 1.037
+      drift: 0.0
       baseSpread: 0.0002
       garchParams:
         omega:  0.00000002
         alpha: 0.02
         beta: 0.95
-      jumpIntensity: 0.0001
-      jumpMean: 0.0
+      jumpIntensity: 0.0002
+      jumpMean: 0.0000
       jumpVol:  0.0005
       useMeanReversion: true
-      kappa: 1.0
-      theta: 1.038
+      kappa: 2.0
+      theta: 1.037
 
     - rateName: "USDTRY"
       initialPrice: 18.0
-      drift: 0.05
-      baseSpread: 0.01
+      drift: 0.02
+      baseSpread: 0.02
       garchParams:
         omega:  0.000001
         alpha: 0.10
         beta: 0.85
-      jumpIntensity: 0.0003
+      jumpIntensity: 0.0005
       jumpMean: 0.002
       jumpVol: 0.02
       useMeanReversion: true
