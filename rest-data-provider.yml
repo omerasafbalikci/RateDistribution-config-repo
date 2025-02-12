@@ -98,7 +98,7 @@ simulator:
 
   # Hacim bazlı volatilite ölçeklendirme
   volumeVolatilityScalingEnabled: true
-  volumeVolatilityFactor: 0.0001
+  volumeVolatilityFactor: 0.00001
 
   # Tatil listesi
   holidays:
