@@ -45,7 +45,7 @@ simulator:
     meanDuration: 200
     transitionProb: 0.05
   regimeHighVol:
-    volScale: 3.0
+    volScale: 2.0
     meanDuration: 50
     transitionProb: 0.10
 
@@ -59,6 +59,9 @@ simulator:
       dateTime: "2025-02-20T09:00:00Z"
       jumpMean: 0.01
       jumpVol: 0.015
+
+  
+  newsApiKey: "33f7ade6f9ce488aa97ad54c9d4191ad"
 
   # Makroekonomik göstergeler
   # Makro veri kaynağı (örnek)
@@ -89,7 +92,7 @@ simulator:
       volMultiplier: 1.0
     - startHour: 13
       endHour: 17
-      volMultiplier: 1.5
+      volMultiplier: 1.2
     - startHour: 17
       endHour: 24
       volMultiplier: 1.0
@@ -117,12 +120,12 @@ simulator:
       drift: 0.0002
       baseSpread: 0.0002
       garchParams:
-        omega:  0.0000001
-        alpha: 0.05
+        omega: 0.0000001
+        alpha: 0.02
         beta: 0.90
       jumpIntensity: 0.001
       jumpMean: 0.0
-      jumpVol:  0.0005
+      jumpVol:  0.0002
       useMeanReversion: true
       kappa: 1.0
       theta: 1.037
