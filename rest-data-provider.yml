@@ -27,7 +27,7 @@ simulator:
     - [0.10, 0.30, 1.0]
 
   # modelType: "GARCH11", "EGARCH" veya "GJR-EGARCH"
-  modelType: "GJR-EGARCH"
+  modelType: "GARCH11"
 
   # Basit veya Markov tabanlı rejim geçişi
   enableRegimeSwitching: true
