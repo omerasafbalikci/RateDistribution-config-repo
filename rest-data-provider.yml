@@ -42,12 +42,12 @@ simulator:
 
   regimeLowVol:
     volScale: 1.0
-    meanDuration: 300
-    transitionProb: 0.02
+    meanDuration: 500
+    transitionProb: 0.01
   regimeHighVol:
-    volScale: 1.2
-    meanDuration: 100
-    transitionProb: 0.05
+    volScale: 1.01
+    meanDuration: 200
+    transitionProb: 0.02
 
   # Haber/Olay şokları
   eventShocks:
@@ -68,37 +68,37 @@ simulator:
   macroIndicators:
     - name: "InterestRate"
       value: 0.05
-      sensitivityToDrift: 0.2
-      sensitivityToVol: 0.2
+      sensitivityToDrift: 0.02
+      sensitivityToVol: 0.02
     - name: "Inflation"
       value: 0.03
-      sensitivityToDrift: 0.1
-      sensitivityToVol: 0.2
+      sensitivityToDrift: 0.01
+      sensitivityToVol: 0.02
 
   # Hafta sonu gap
   weekendHandling:
     enabled: true
-    weekendGapJumpMean: 0.0001
-    weekendGapJumpVol: 0.0002
+    weekendGapJumpMean: 0.00001
+    weekendGapJumpVol: 0.00002
 
   # Seans bazlı vol multiplier
   sessionVolFactors:
     - startHour: 0
       endHour: 6
-      volMultiplier: 0.95
+      volMultiplier: 0.999
     - startHour: 6
       endHour: 13
       volMultiplier: 1.0
     - startHour: 13
       endHour: 17
-      volMultiplier: 1.05
+      volMultiplier: 1.001
     - startHour: 17
       endHour: 24
       volMultiplier: 1.0
 
   # Hacim bazlı volatilite ölçeklendirme
   volumeVolatilityScalingEnabled: true
-  volumeVolatilityFactor: 0.0000001
+  volumeVolatilityFactor: 0.000000001
 
   # Tatil listesi
   holidays:
@@ -116,45 +116,45 @@ simulator:
   rates:
     - rateName: "EURUSD"
       initialPrice: 1.037
-      drift: 0.0002
-      baseSpread: 0.0002
+      drift: 0.00002
+      baseSpread: 0.0001
       garchParams:
-        omega: 0.0000001
-        alpha: 0.01
-        beta: 0.88
-      jumpIntensity: 0.0001
+        omega: 0.00000001
+        alpha: 0.003
+        beta: 0.94
+      jumpIntensity: 0.00001
       jumpMean: 0.0
-      jumpVol:  0.0001
+      jumpVol:  0.00002
       useMeanReversion: true
-      kappa: 0.02
+      kappa: 0.01
       theta: 1.037
 
     - rateName: "USDTRY"
       initialPrice: 18.0
-      drift: 0.0005
-      baseSpread: 0.01
+      drift: 0.00005
+      baseSpread: 0.005
       garchParams:
-        omega:  0.0000005
-        alpha: 0.02
-        beta: 0.90
-      jumpIntensity: 0.0002
-      jumpMean: 0.0005
-      jumpVol: 0.001
+        omega:  0.00000005
+        alpha: 0.004
+        beta: 0.93
+      jumpIntensity: 0.00002
+      jumpMean: 0.00001
+      jumpVol: 0.00005
       useMeanReversion: false
       kappa: 0.0
       theta: 18.5
 
     - rateName: "XAUUSD"
       initialPrice: 1850.0
-      drift: 0.0001
-      baseSpread: 0.5
+      drift: 0.00001
+      baseSpread: 0.3
       garchParams:
-        omega:  0.000001
-        alpha: 0.03
-        beta: 0.90
-      jumpIntensity: 0.0001
+        omega:  0.0000001
+        alpha: 0.003
+        beta: 0.92
+      jumpIntensity: 0.00001
       jumpMean: 0.0
-      jumpVol: 0.2
+      jumpVol: 0.0001
       useMeanReversion: false
       kappa: 0.0
       theta: 1800.0
