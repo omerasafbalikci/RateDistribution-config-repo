@@ -102,7 +102,6 @@ simulator:
       name: "New Year"
 
   # Tarihsel veri path (CSV, JSON vb.)
-  historicalDataPath: "src/main/resources/data/historical_fx.csv"
 
   # Kur tanımları (Örnek)
   rates:
