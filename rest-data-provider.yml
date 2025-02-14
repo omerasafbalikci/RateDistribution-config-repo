@@ -45,20 +45,12 @@ simulator:
     meanDuration: 500
     transitionProb: 0.01
   regimeHighVol:
-    volScale: 1.01
+    volScale: 1.005
     meanDuration: 200
-    transitionProb: 0.02
+    transitionProb: 0.01
 
   # Haber/Olay şokları
-  eventShocks:
-    - name: "FOMC Rate Hike"
-      dateTime: "2025-01-15T12:00:00Z"
-      jumpMean: 0.0002
-      jumpVol: 0.0005
-    - name: "Geopolitical Tension"
-      dateTime: "2025-02-20T09:00:00Z"
-      jumpMean: 0.0003
-      jumpVol: 0.0006
+  eventShocks: []
   
   newsApiKey: "33f7ade6f9ce488aa97ad54c9d4191ad"
 
@@ -68,12 +60,12 @@ simulator:
   macroIndicators:
     - name: "InterestRate"
       value: 0.05
-      sensitivityToDrift: 0.02
-      sensitivityToVol: 0.02
+      sensitivityToDrift: 0.0
+      sensitivityToVol: 0.0
     - name: "Inflation"
       value: 0.03
-      sensitivityToDrift: 0.01
-      sensitivityToVol: 0.02
+      sensitivityToDrift: 0.0
+      sensitivityToVol: 0.0
 
   # Hafta sonu gap
   weekendHandling:
@@ -98,7 +90,7 @@ simulator:
 
   # Hacim bazlı volatilite ölçeklendirme
   volumeVolatilityScalingEnabled: true
-  volumeVolatilityFactor: 0.000000001
+  volumeVolatilityFactor: 0.0
 
   # Tatil listesi
   holidays:
@@ -116,17 +108,17 @@ simulator:
   rates:
     - rateName: "EURUSD"
       initialPrice: 1.037
-      drift: 0.00002
-      baseSpread: 0.0001
+      drift: 0.00000
+      baseSpread: 0.00005
       garchParams:
-        omega: 0.00000001
-        alpha: 0.003
-        beta: 0.94
-      jumpIntensity: 0.00001
+        omega: 0.0000000001
+        alpha: 0.0005
+        beta: 0.999
+      jumpIntensity: 0.0
       jumpMean: 0.0
-      jumpVol:  0.00002
-      useMeanReversion: true
-      kappa: 0.01
+      jumpVol:  0.0
+      useMeanReversion: false
+      kappa: 0.0
       theta: 1.037
 
     - rateName: "USDTRY"
