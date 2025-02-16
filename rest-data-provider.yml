@@ -67,11 +67,11 @@ simulator:
     - name: "FOMC Rate Hike"
       dateTime: "2025-01-15T12:00:00Z"
       jumpMean: 0.0002
-      jumpVol: 0.0005
+      jumpVol: 0.0003
     - name: "Geopolitical Tension"
       dateTime: "2025-02-20T09:00:00Z"
       jumpMean: 0.0003
-      jumpVol: 0.0006
+      jumpVol: 0.0004
   
   newsApiKey: "33f7ade6f9ce488aa97ad54c9d4191ad"
 
@@ -81,18 +81,18 @@ simulator:
   macroIndicators:
     - name: "InterestRate"
       value: 0.05
-      sensitivityToDrift: 0.02
-      sensitivityToVol: 0.02
+      sensitivityToDrift: 0.0
+      sensitivityToVol: 0.0
     - name: "Inflation"
       value: 0.03
-      sensitivityToDrift: 0.01
-      sensitivityToVol: 0.02
+      sensitivityToDrift: 0.0
+      sensitivityToVol: 0.0
 
   # Hafta sonu gap
   weekendHandling:
     enabled: true
-    weekendGapJumpMean: 0.00001
-    weekendGapJumpVol: 0.00002
+    weekendGapJumpMean: 0.0
+    weekendGapJumpVol: 0.0
 
   # Seans bazlı vol multiplier
   sessionVolFactors:
@@ -111,7 +111,7 @@ simulator:
 
   # Hacim bazlı volatilite ölçeklendirme
   volumeVolatilityScalingEnabled: true
-  volumeVolatilityFactor: 0.000000001
+  volumeVolatilityFactor: 0.0000000001
 
   # Tatil listesi
   holidays:
@@ -129,15 +129,15 @@ simulator:
   rates:
     - rateName: "EURUSD"
       initialPrice: 1.037
-      drift: 0.00002
+      drift: 0.0               # sabit tutalım
       baseSpread: 0.0001
       garchParams:
-        omega: 0.00000001
-        alpha: 0.003
-        beta: 0.94
-      jumpIntensity: 0.00001
+        omega: 1e-12
+        alpha: 0.0001
+        beta: 0.999
+      jumpIntensity: 0.0
       jumpMean: 0.0
-      jumpVol:  0.00002
+      jumpVol:  0.0
       useMeanReversion: true
       kappa: 0.01
       theta: 1.037
@@ -147,30 +147,30 @@ simulator:
       drift: 0.0
       baseSpread: 0.02
       garchParams:
-        omega:  0.000000001
-        alpha: 0.001
-        beta: 0.98
+        omega:  1e-12
+        alpha: 0.0001
+        beta: 0.999
       jumpIntensity: 0.0
       jumpMean: 0.0
-      jumpVol: 0.0
+      jumpVol:  0.0
       useMeanReversion: true
       kappa: 0.01
       theta: 100.0
 
     - rateName: "XAUUSD"
       initialPrice: 1850.0
-      drift: 0.00001
+      drift: 0.0
       baseSpread: 0.3
       garchParams:
-        omega:  0.0000001
-        alpha: 0.003
-        beta: 0.92
-      jumpIntensity: 0.00001
+        omega:  1e-12
+        alpha: 0.0001
+        beta: 0.999
+      jumpIntensity: 0.0
       jumpMean: 0.0
-      jumpVol: 0.0001
-      useMeanReversion: false
+      jumpVol: 0.0
+      useMeanReversion: true
       kappa: 0.0
-      theta: 1800.0
+      theta: 1850.0
 
 management:
   endpoints:
