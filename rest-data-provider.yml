@@ -27,7 +27,7 @@ simulator:
     - [0.10, 0.30, 1.0]
 
   # modelType: "GARCH11", "EGARCH" veya "GJR-EGARCH"
-  modelType: "GJR-EGARCH"
+  modelType: "EGARCH"
 
   shockConfig:
     smallShockWeekly: 2.5   # Haftada ortalama 2.5 küçük şok
@@ -35,12 +35,12 @@ simulator:
     bigShockYearly: 1.0     # Yılda ortalama 1 büyük şok
 
     # Magnitude aralıkları
-    smallShockMinPct: 0.001   # %0.1
-    smallShockMaxPct: 0.005   # %0.5
-    mediumShockMinPct: 0.01   # %1
-    mediumShockMaxPct: 0.05   # %5
-    bigShockMinPct: 0.10      # %10
-    bigShockMaxPct: 0.50      # %50
+    smallShockMinPct: 0.0005   # %0.1
+    smallShockMaxPct: 0.002   # %0.5
+    mediumShockMinPct: 0.002  # %1
+    mediumShockMaxPct: 0.005   # %5
+    bigShockMinPct: 0.01      # %10
+    bigShockMaxPct: 0.03      # %50
 
   # Basit veya Markov tabanlı rejim geçişi
   enableRegimeSwitching: true
