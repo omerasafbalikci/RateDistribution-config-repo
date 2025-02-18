@@ -30,20 +30,20 @@ simulator:
   modelType: "EGARCH"
 
   shockConfig:
-    smallShockWeekly: 2.5   # Haftada ortalama 2.5 küçük şok
-    mediumShockMonthly: 1.5 # Ayda ortalama 1.5 orta şok
+    smallShockWeekly: 1   # Haftada ortalama 2.5 küçük şok
+    mediumShockMonthly: 0.5 # Ayda ortalama 1.5 orta şok
     bigShockYearly: 1.0     # Yılda ortalama 1 büyük şok
 
     # Magnitude aralıkları
-    smallShockMinPct: 0.0005   # %0.1
-    smallShockMaxPct: 0.002   # %0.5
-    mediumShockMinPct: 0.002  # %1
-    mediumShockMaxPct: 0.005   # %5
-    bigShockMinPct: 0.01      # %10
-    bigShockMaxPct: 0.03      # %50
+    smallShockMinPct: 0.0001   # %0.1
+    smallShockMaxPct: 0.0003  # %0.5
+    mediumShockMinPct: 0.0005 # %1
+    mediumShockMaxPct: 0.001   # %5
+    bigShockMinPct: 0.002    # %10
+    bigShockMaxPct: 0.003      # %50
 
   # Basit veya Markov tabanlı rejim geçişi
-  enableRegimeSwitching: true
+  enableRegimeSwitching: false
   useMarkovSwitching: false
 
   # NxN Markov matrisi örneği (burada 3 rejimlik bir örnek)
@@ -132,14 +132,14 @@ simulator:
       drift: 0.0               # sabit tutalım
       baseSpread: 0.0001
       garchParams:
-        omega: 1e-12
-        alpha: 0.0001
-        beta: 0.999
+        omega: 1e-15
+        alpha: 0.00001
+        beta: 0.99999
       jumpIntensity: 0.0
       jumpMean: 0.0
       jumpVol:  0.0
       useMeanReversion: true
-      kappa: 0.01
+      kappa: 0.001
       theta: 1.037
 
     - rateName: "USDTRY"
