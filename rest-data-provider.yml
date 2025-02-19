@@ -31,15 +31,7 @@ simulator:
     bigShockMinPct: 0.01
     bigShockMaxPct: 0.02
 
-  eventShocks:
-    - name: "FOMC Rate Hike"
-      dateTime: "2025-01-15T12:00:00Z"
-      jumpMean: 0.01   # %1
-      jumpVol: 0.0003
-    - name: "Geopolitical Tension"
-      dateTime: "2025-02-20T09:00:00Z"
-      jumpMean: 0.02   # %2
-      jumpVol: 0.0004
+  eventShocks: []
 
   # Seans faktörleri
   sessionVolFactors:
