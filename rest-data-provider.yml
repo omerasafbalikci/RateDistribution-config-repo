@@ -10,11 +10,10 @@ server:
   port: 8083
 
 simulator:
-  update-interval-millis: 1000       # 1 saniyede bir update
-  max-updates: 0                    # 0 = sınırsız
+  update-interval-millis: 1000
+  max-updates: 0
   modelType: "EGARCH"
 
-  # Korelasyon matrisi (3x3)
   correlationMatrix:
     - [1.0, 0.20, 0.10]
     - [0.20, 1.0, 0.30]
@@ -33,7 +32,8 @@ simulator:
 
   eventShocks: []
 
-  # Seans faktörleri
+  macroIndicators: []
+
   sessionVolFactors:
     - startHour: 0
       endHour: 6
@@ -48,7 +48,6 @@ simulator:
       endHour: 24
       volMultiplier: 1.0
 
-  # Tatiller
   holidays:
     - startDateTime: "2024-12-24T00:00:00Z"
       endDateTime:   "2024-12-26T00:00:00Z"
@@ -90,6 +89,23 @@ simulator:
         omega: 1e-12
         alpha: 0.0001
         beta: 0.999
-      useMeanReversion: false
+      useMeanReversion: true
       kappa: 0.0
       theta: 0.0
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+  zipkin:
+    tracing:
+      endpoint: "http://zipkin:9411/api/v2/spans"
+  tracing:
+    sampling:
+      probability: 1.0
