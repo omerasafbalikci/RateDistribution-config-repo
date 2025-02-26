@@ -28,8 +28,6 @@ simulator:
   enableRegimeSwitching: true     # Volatilite rejimleri arasında geçiş
   regimeSwitchProbability: 0.001  # Rejim geçiş olasılığı (önek)
 
-  weekendGapPct: 0.005
-
   correlationMatrix:
     - [1.0, 0.20, 0.10]
     - [0.20, 1.0, 0.30]
