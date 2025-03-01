@@ -13,21 +13,7 @@ simulator:
   update-interval-millis: 1000
   max-updates: 0
   modelType: "EGARCH"
-
-  useJumpDiffusion: true          # Basit Poisson süreçli "jump" eklemek için
-  jumpIntensity: 0.8              # Yıllık ortalama jump frekansı (örnek)
-  jumpMean: 0.02                  # Jump ortalaması (ör. +%2)
-  jumpVol: 0.05                   # Jump volatilitesi (ör. 5%)
-
-  useHMMRegime: true
-  hmmTransitionMatrix:
-    - [0.95, 0.05]
-    - [0.10, 0.90]
-  hmmVolScales: [0.8, 1.5]    # lowVol => 0.8, highVol => 1.5
   
-  enableRegimeSwitching: true     # Volatilite rejimleri arasında geçiş
-  regimeSwitchProbability: 0.001  # Rejim geçiş olasılığı (önek)
-
   correlationMatrix:
     - [1.0, 0.20, 0.10]
     - [0.20, 1.0, 0.30]
@@ -62,8 +48,6 @@ simulator:
       endHour: 24
       volMultiplier: 1.0
 
-  weekendGapPct: 0.003
-
   holidays:
     - startDateTime: "2024-12-24T00:00:00Z"
       endDateTime:   "2024-12-26T00:00:00Z"
@@ -81,8 +65,6 @@ simulator:
         omega: 1e-10
         alpha: 0.00001
         beta: 0.99999
-        gamma: 0.08        # GJR param
-        egarchTheta: -0.2  # EGARCH asimetrik param
       useMeanReversion: true
       kappa: 0.001
       theta: 1.0481
@@ -95,8 +77,6 @@ simulator:
         omega: 1e-12
         alpha: 0.0001
         beta: 0.999
-        gamma: 0.2       # GJR param
-        egarchTheta: 0.0  # EGARCH asimetrik param
       useMeanReversion: true
       kappa: 0.01
       theta: 18.50
@@ -109,8 +89,6 @@ simulator:
         omega: 1e-12
         alpha: 0.0001
         beta: 0.999
-        gamma: 0.0        # GJR param
-        egarchTheta: 0.0  # EGARCH asimetrik param
       useMeanReversion: true
       kappa: 0.0
       theta: 0.0
