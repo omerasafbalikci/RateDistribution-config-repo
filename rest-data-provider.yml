@@ -32,7 +32,7 @@ simulator:
 
   eventShocks:
     - name: "FedRateDecision"
-      dateTime: 2025-03-12T05:05:00Z
+      dateTime: 2025-03-12T02:08:00Z
       jumpMean: 0.2
       jumpVol: 0.1
 
