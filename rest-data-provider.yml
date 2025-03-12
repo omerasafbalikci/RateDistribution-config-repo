@@ -30,9 +30,30 @@ simulator:
     bigShockMinPct: 0.01
     bigShockMaxPct: 0.02
 
-  eventShocks: []
+  eventShocks:
+    - name: "FedRateDecision"
+      dateTime: 2025-03-12T4:55:00Z
+      jumpMean: 0.2
+      jumpVol: 0.1
+
+    - name: "ECBAnnouncement"
+      dateTime: 2025-04-15T09:00:00Z
+      jumpMean: -0.01
+      jumpVol: 0.02
 
   macroIndicators: []
+  #  - name: "Inflation"
+  #    value: 5.0
+  #    sensitivityToDrift: 0.01
+  #    sensitivityToVol: 0.02
+
+  #  - name: "GDPGrowth"
+  #    value: 3.2
+  #    sensitivityToDrift: -0.005
+  #    sensitivityToVol: 0.01
+
+  weekendGapVolatility: 0.002
+  weekendShockFactor: 1.0
 
   sessionVolFactors:
     - startHour: 0
