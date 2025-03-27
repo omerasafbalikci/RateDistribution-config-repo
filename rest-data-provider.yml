@@ -84,7 +84,7 @@ simulator:
       baseSpread: 0.0001
       garchParams:
         omega: 0.0001
-        alpha: 0.9999
+        alpha: 0.00000001
         beta: 0.99999
       useMeanReversion: true
       kappa: 0.001
