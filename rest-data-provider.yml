@@ -81,7 +81,7 @@ simulator:
     - rateName: "EURUSD"
       initialPrice: 1.0481
       drift: 0.02
-      baseSpread: 0.0001
+      baseSpread: 0.1
       garchParams:
         omega: 0.001
         alpha: 0.1
