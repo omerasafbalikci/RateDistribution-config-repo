@@ -83,7 +83,7 @@ simulator:
       drift: 0.02
       baseSpread: 0.0001
       garchParams:
-        omega: 0.9999
+        omega: 0.01
         alpha: 0.1
         beta: 0.99999
       useMeanReversion: true
