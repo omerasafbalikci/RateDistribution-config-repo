@@ -12,7 +12,7 @@ server:
 simulator:
   update-interval-millis: 1000
   max-updates: 0
-  modelType: "EGARCH"
+  modelType: "GARCH11"
   
   correlationMatrix:
     - [1.0, 0.20, 0.10]
