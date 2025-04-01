@@ -12,12 +12,6 @@ server:
 simulator:
   update-interval-millis: 1000
   max-updates: 0
-  modelType: "EGARCH"
-  
-  correlationMatrix:
-    - [1.0, 0.20, 0.10]
-    - [0.20, 1.0, 0.30]
-    - [0.10, 0.30, 1.0]
 
   shockConfig:
     smallShockWeekly: 2.5
@@ -40,17 +34,6 @@ simulator:
       dateTime: 2025-04-15T09:00:00Z
       jumpMean: -0.01
       jumpVol: 0.02
-
-  macroIndicators: []
-  #  - name: "Inflation"
-  #    value: 5.0
-  #    sensitivityToDrift: 0.01
-  #    sensitivityToVol: 0.02
-
-  #  - name: "GDPGrowth"
-  #    value: 3.2
-  #    sensitivityToDrift: -0.005
-  #    sensitivityToVol: 0.01
 
   weekendGapVolatility: 0.002
   weekendShockFactor: 1.0
