@@ -53,8 +53,8 @@ simulator:
       volMultiplier: 1.0
 
   holidays:
-    - startDateTime: "2025-4-4T00:00:00Z"
-      endDateTime:   "2025-4-5T00:00:00Z"
+    - startDateTime: "2025-04-04T00:00:00Z"
+      endDateTime:   "2025-04-05T00:00:00Z"
       name: "Christmas"
     - startDateTime: "2025-01-01T00:00:00Z"
       endDateTime:   "2025-01-02T00:00:00Z"
