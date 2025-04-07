@@ -26,9 +26,9 @@ simulator:
 
   eventShocks:
     - name: "FedRateDecision"
-      dateTime: 2025-04-07T04:15:10Z
-      jumpMean: 0.01
-      jumpVol: 0.01
+      dateTime: 2025-04-07T04:23:00Z
+      jumpMean: 0.000001
+      jumpVol: 0.000001
 
     - name: "ECBAnnouncement"
       dateTime: 2025-04-15T09:00:00Z
