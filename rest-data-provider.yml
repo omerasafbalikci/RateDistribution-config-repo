@@ -10,7 +10,7 @@ server:
   port: 8083
 
 simulator:
-  update-interval-millis: 5000
+  update-interval-millis: 1000
   max-updates: 0
 
   shockConfig:
