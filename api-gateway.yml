@@ -15,11 +15,9 @@ jwt:
   authorities-key: "roles"
 
 route:
-  auth: "lb://auth-service/auth"
+  auth: "lb://auth-service"
   user: "lb://user-management-service"
-  rest: "lb://rest-data-provider"
-  consumerdb: "lb://rate-hub-consumer-db"
-  consumeros: "lb://rate-hub-consumer-opensearch"
+
 
 redis:
   host: "localhost"
