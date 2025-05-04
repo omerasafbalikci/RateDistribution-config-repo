@@ -1,0 +1,49 @@
+spring:
+  application:
+    name: user-management-service
+  cloud:
+    config:
+      label: docker
+  rabbitmq:
+    host: rabbitmq
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka
+  instance:
+    hostname: user-management-service
+
+rabbitmq:
+  exchange: user-exchange
+  queue:
+    create: user-queue-create
+    update: user-queue-update
+    delete: user-queue-delete
+    restore: user-queue-restore
+    addRole: user-queue-add-role
+    removeRole: user-queue-remove-role
+  routingKey:
+    create: user.create
+    update: user.update
+    delete: user.delete
+    restore: user.restore
+    addRole: user.add.role
+    removeRole: user.remove.role
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+  zipkin:
+    tracing:
+      endpoint: "http://zipkin:9411/api/v2/spans"
+  tracing:
+    sampling:
+      probability: 1.0
