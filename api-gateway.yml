@@ -9,6 +9,10 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+    ip-address: 127.0.0.1
+    instance-id: ${spring.application.name}:${server.port}
 
 jwt:
   secret-key: "6bc18dff62463c49343d083ae0e523fbfb88d4d45b4a9cb62e86d0c53bd9b870"
