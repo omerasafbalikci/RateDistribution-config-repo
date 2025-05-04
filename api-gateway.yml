@@ -15,7 +15,7 @@ jwt:
   authorities-key: "roles"
 
 route:
-  auth: "lb://auth-service"
+  auth: "lb://auth-service/auth"
   user: "lb://user-management-service"
   rest: "lb://rest-data-provider"
   consumerdb: "lb://rate-hub-consumer-db"
