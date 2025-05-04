@@ -17,7 +17,7 @@ jwt:
 route:
   auth: "lb://auth-service"
   user: "lb://user-management-service"
-
+  rest: "lb://rest-data-provider"
 
 redis:
   host: "localhost"
