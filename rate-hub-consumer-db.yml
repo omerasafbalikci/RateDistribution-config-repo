@@ -10,10 +10,10 @@ spring:
       auto-offset-reset: latest
       enable-auto-commit: true
 
-topics:
-  raw: ratehub.raw
-  calculated: ratehub.calculated
-
+ratehub:
+  raw-topic: ratehub.raw
+  calc-topic: ratehub.calculated
+  
 eureka:
   client:
     serviceUrl:
