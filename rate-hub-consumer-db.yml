@@ -10,10 +10,13 @@ spring:
       auto-offset-reset: latest
       enable-auto-commit: true
 
+server:
+  port: 8085
+
 ratehub:
   raw-topic: ratehub.raw
   calc-topic: ratehub.calculated
-  
+
 eureka:
   client:
     serviceUrl:
