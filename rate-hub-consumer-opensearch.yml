@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: rate-hub-consumer-opensearch
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: ratehub-consumer-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: latest
+      enable-auto-commit: true
+
+topics:
+  raw: ratehub.raw
+  calculated: ratehub.calculated
+
+opensearch:
+  host: localhost
+  port: 9200
+  scheme: http
+  index-name: rates
+
+logging:
+  level:
+    root: INFO
+    org.opensearch.client: WARN
