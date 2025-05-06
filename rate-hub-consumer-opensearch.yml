@@ -10,6 +10,9 @@ spring:
       auto-offset-reset: latest
       enable-auto-commit: true
 
+server:
+  port: 8086
+
 topics:
   raw: ratehub.raw
   calculated: ratehub.calculated
