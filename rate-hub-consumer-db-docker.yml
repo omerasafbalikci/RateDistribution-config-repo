@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: rate-hub-consumer-db
+  cloud:
+    config:
+      label: docker
+  kafka:
+    bootstrap-servers: kafka:9092
+    consumer:
+      group-id: ratehub-consumer-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: latest
+      enable-auto-commit: true
+
+ratehub:
+  raw-topic: ratehub.raw
+  calc-topic: ratehub.calculated
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761/eureka
+  instance:
+    hostname: rate-hub-consumer-db
+
+logging:
+  level:
+    root: INFO
+    org.opensearch.client: WARN
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    prometheus:
+      enabled: true
+    metrics:
+      enabled: true
+  zipkin:
+    tracing:
+      endpoint: "http://zipkin:9411/api/v2/spans"
+  tracing:
+    sampling:
+      probability: 1.0
+
