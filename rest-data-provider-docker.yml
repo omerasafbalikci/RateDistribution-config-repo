@@ -11,7 +11,7 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-server:8761/eureka
   instance:
-    hostname: auth-service
+    hostname: rest-data-provider
 
 simulator:
   update-interval-millis: 1000
