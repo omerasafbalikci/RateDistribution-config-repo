@@ -13,7 +13,6 @@ eureka:
       defaultZone: http://discovery-server:8761/eureka
   instance:
     prefer-ip-address: true
-    hostname: ${spring.application.name}
 
 jwt:
   secret-key: "6bc18dff62463c49343d083ae0e523fbfb88d4d45b4a9cb62e86d0c53bd9b870"
