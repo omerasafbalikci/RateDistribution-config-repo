@@ -90,7 +90,6 @@ simulator:
       kappa: 0.01
       theta: 32.50
 
-
 management:
   endpoints:
     web:
