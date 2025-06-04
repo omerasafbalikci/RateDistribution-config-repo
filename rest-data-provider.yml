@@ -71,25 +71,25 @@ simulator:
       
   rates:
     - rateName: "EURUSD"
-      initialPrice: 1.0850
-      drift: 0.001
-      baseSpread: 0.00008
+      initialPrice: 1.1384
+      drift: 0.02
+      baseSpread: 0.0001
       garchParams:
-        omega: 0.0000000002
-        alpha: 0.05
-        beta: 0.93
-      useMeanReversion: true
-      kappa: 0.003
-      theta: 1.0850
-
-    - rateName: "USDTRY"
-      initialPrice: 32.50
-      drift: 0.005
-      baseSpread: 0.01
-      garchParams:
-        omega: 0.00000005
-        alpha: 0.07
+        omega: 0.000000000001
+        alpha: 0.1
         beta: 0.9
       useMeanReversion: true
-      kappa: 0.01
-      theta: 32.50
+      kappa: 0.001
+      theta: 1.1384
+
+    - rateName: "USDTRY"
+      initialPrice: 39.15
+      drift: 0.02
+      baseSpread: 0.0001
+      garchParams:
+        omega: 0.000000000001
+        alpha: 0.1
+        beta: 0.9
+      useMeanReversion: true
+      kappa: 0.001
+      theta: 39.15
