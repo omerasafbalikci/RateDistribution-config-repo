@@ -5,6 +5,9 @@ spring:
     redis:
       host: redis
       port: 6380
+  config:
+    activate:
+      on-profile: docker
 
 eureka:
   client:
