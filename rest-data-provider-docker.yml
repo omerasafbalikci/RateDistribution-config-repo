@@ -8,6 +8,9 @@ spring:
   config:
     activate:
       on-profile: docker
+  rabbitmq:
+    host: rabbitmq
+    port: "5672"
 
 eureka:
   client:
